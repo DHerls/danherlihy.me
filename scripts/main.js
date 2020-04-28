@@ -10,7 +10,9 @@ let attributes = [
   "DevOps Engineer",
   "Nittany Lion",
   "Problem Solver",
-  "Open-Source Contributer"
+  "Open-Source Contributer",
+  "Communicator",
+  "Automator"
 ];
 let used = [];
 
