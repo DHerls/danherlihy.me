@@ -1,4 +1,4 @@
-const subtitle = document.getElementById("subtitle");
+const subtitle = document.getElementById("main-subtitle");
 const attributeSpan = document.getElementById("rotating-attribute");
 let attributes = [
   "Leader",
