@@ -72,7 +72,14 @@ const configureProjects = () => {
   }
 }
 
-
-
 configureAttributes();
 configureProjects();
+
+document
+  .getElementById("scroll-arrow-container")
+  .addEventListener("click", () => {
+    window.scrollTo(
+      0,
+      document.getElementById("about").getBoundingClientRect().top
+    );
+  });
