@@ -78,8 +78,10 @@ configureProjects();
 document
   .getElementById("scroll-arrow-container")
   .addEventListener("click", () => {
-    window.scrollTo(
-      0,
-      document.getElementById("about").getBoundingClientRect().top
-    );
+    const about = document.getElementById("about")
+    const top =
+      about.getBoundingClientRect().top +
+      window.pageYOffset -
+      about.ownerDocument.documentElement.clientTop;
+    window.scrollTo(0, top);
   });
