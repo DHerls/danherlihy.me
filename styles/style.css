@@ -150,6 +150,26 @@ h4 {
     shape-outside: circle(50%);
 }
 
+#skills {
+    display: flex;
+}
+
+#skills > div {
+    width: 33vw;
+}
+
+#skills div h3 {
+    text-align: center;
+    font-size: 1.5em;
+    border-bottom: 2px solid #0093ff;
+    padding: 0 5px;
+}
+
+#skills .technologies {
+    display: flex;
+    flex-flow: row wrap;
+}
+
 .experience-section {
     display: flex;
 }
@@ -340,6 +360,18 @@ h4 {
 .tech .tech-label img{
     fill: white;
     padding-left: 5px;
+}
+
+.tech.tech.secondary {
+    border-color: #888888;
+}
+
+.tech.secondary .tech-label {
+    color: #bababa;
+}
+
+.tech.secondary .tech-icon i {
+    color: #bababa;
 }
 
 .project-links {
