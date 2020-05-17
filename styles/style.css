@@ -223,7 +223,7 @@ h4 {
 
 .experience-heading .experience-title {
     padding: 0 20px;
-    background-color: #46464695;
+    background-color: rgba(70, 70, 70, .584);
 }
 
 .experience-description {
