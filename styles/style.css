@@ -8,6 +8,7 @@ html {
 body {
     background-color: #464646;
     margin: 0;
+    padding-bottom: 20px;
 }
 
 * {
@@ -391,4 +392,11 @@ h4 {
 
 .project-links .icon i {
     text-decoration: none;
+}
+
+#contact-holder {
+    margin: 0 auto;
+    display: flex;
+    width: 40%;
+    justify-content: space-evenly;
 }
