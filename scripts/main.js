@@ -75,13 +75,14 @@ const configureProjects = () => {
 configureAttributes();
 configureProjects();
 
-document
-  .getElementById("scroll-arrow-container")
-  .addEventListener("click", () => {
-    const about = document.getElementById("about")
-    const top =
-      about.getBoundingClientRect().top +
-      window.pageYOffset -
-      about.ownerDocument.documentElement.clientTop;
-    window.scrollTo(0, top);
-  });
+window.onscroll = myFunction;
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky");
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
