@@ -79,14 +79,15 @@ const configureProjects = () => {
 configureAttributes();
 configureProjects();
 
-window.onscroll = myFunction;
+window.onscroll = navbarScrollListenter;
 var navbar = document.getElementById("navbar");
 var sticky = navbar.offsetTop;
 
-function myFunction() {
+function navbarScrollListenter() {
   if (window.pageYOffset >= sticky) {
     navbar.classList.add("sticky");
   } else {
     navbar.classList.remove("sticky");
   }
 }
+navbarScrollListenter();
