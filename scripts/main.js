@@ -46,7 +46,11 @@ const configureAttributes = () => {
     }, 3000);
   };
 
-  setInterval(rotateAttribute, 10000);
+  setTimeout(() => {
+    rotateAttribute();
+    setInterval(rotateAttribute, 10000);
+  }, 3000);
+  
 }
 
 
