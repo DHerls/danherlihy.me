@@ -212,6 +212,7 @@ h4 {
 #headshot {
     border-radius: 50%;
     width: 20vw;
+    max-width: 350px;
     flex-shrink: 0;
     shape-outside: circle(50%);
 }
