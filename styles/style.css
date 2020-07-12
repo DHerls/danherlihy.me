@@ -41,7 +41,7 @@ nav {
 nav ul {
     display: flex;
     justify-content: space-evenly;
-    padding: 10px 0px;
+    padding: 10px;
     margin: 0;
     background-color: #464646;
 }
@@ -150,9 +150,23 @@ h4 {
     white-space: nowrap;
 }
 
+#attributes {
+    display: flex;
+    width: 100%;
+}
+
 #rotating-attribute {
     display: inline-block;
     margin-left: 5px;
+}
+
+.sub-content {
+    display: inline;
+}
+
+.sub-attribute::after {
+    content: "|";
+    margin: 0 4px;
 }
 
 #scroll-arrow-container {
@@ -450,4 +464,127 @@ h4 {
     display: flex;
     width: 40%;
     justify-content: space-evenly;
+}
+
+
+@media (max-width: 750px) {
+    #main-content {
+        padding-left: 3vw;
+        padding-right: 3vw;
+    }
+    .title-box {
+        height: 90vh;
+    }
+
+    .title-box h1 {
+        font-size: 10vw;
+    }
+
+    #main-subtitle {
+        font-size: 1em;
+    }
+
+    #attributes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sub-attribute {
+        position: relative;
+        margin-bottom: 10px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .sub-attribute::after {
+        content: '';
+        width: 15%;
+        height: 1px;
+        background: white;
+        position: absolute;
+        bottom: -7px;
+        left: 42.5%
+
+    }
+
+
+    nav {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        justify-content: space-between;
+    }
+
+    nav ul li a {
+        font-size: 1.1em;
+    }
+
+    .sticky {
+        width: 100vw;
+        padding: 0;
+    }
+
+    .sticky + #nav-placeholder {
+        padding-top: 9vh;
+    }
+
+    #about-content {
+        flex-direction: column-reverse;
+    }
+
+    #headshot {
+        border-radius: 50%;
+        width: 40vw;
+        flex-shrink: 0;
+        shape-outside: circle(50%);
+    }
+
+    #skills {
+        display: block;
+    }
+
+    #skills > div {
+        display: block;
+        width: 100vw;
+    }
+
+    .experience-section {
+        flex-direction: column;
+    }
+
+    .experience-section .experience-heading {
+        width: 100%;
+    }
+
+    .experience-heading .experience-title {
+        padding: 0px;
+        width: 100%;
+    }
+
+    .experience-section .experience-description {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .experience-section:nth-child(2n) .experience-heading{
+        order: 0;
+    }
+
+    .project-container {
+        width: 100%;
+        margin-bottom: 25px;
+
+    }
+
+    .expand-arrow-container {
+        opacity: 1;
+    }
+
+    #contact-holder {
+        width: 60%;
+        /* width: 30px; */
+        /* height: 30px; */
+    }
 }

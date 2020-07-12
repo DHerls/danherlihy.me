@@ -40,7 +40,13 @@ const configureAttributes = () => {
       used.push(attributes[randomIndex]);
       attributeSpan.innerText = attributes[randomIndex];
       attributes = attributes.filter((_, i) => i !== randomIndex);
-      subtitle.style.width = 378 + attributeSpan.clientWidth + "px";
+      const maxWidth = Math.max(
+        document.documentElement.clientWidth || 0,
+        window.innerWidth || 0
+      );
+      const newWidth = 378 + attributeSpan.clientWidth;
+      const width = newWidth < maxWidth ? newWidth : maxWidth;
+      subtitle.style.width =  width + "px";
       attributeSpan.classList.remove("hidden");
       attributeSpan.classList.add("visible");
     }, 3000);
