@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: Deploy
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
@@ -24,4 +24,4 @@ jobs:
     - name: Push to s3
       run: |
         rm -rf .git/
-        aws s3 sync  s3://danherlihy.me
+        aws s3 sync . s3://danherlihy.me
