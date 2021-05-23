@@ -23,6 +23,8 @@ jobs:
         aws-region: us-east-1
     - name: Push to s3
       run: |
-        rm -rf ./.*
+        rm -rf .git/
+        rm -rf .github/
+        rm -rf .vscode/
         aws s3 sync . s3://danherlihy.me
         aws s3 cp s3://danherlihy.me/ s3://danherlihy.me/ --include "*" --exclude "*.html" --recursive --metadata-directive REPLACE --expires 2034-01-01T00:00:00Z --cache-control max-age=604800,public
