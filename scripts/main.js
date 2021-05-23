@@ -14,6 +14,8 @@ const configureAttributes = () => {
     "Open-Source Contributer",
     "Communicator",
     "Automator",
+    "Lifelong Learner",
+    "Guitar Player"
   ];
   let used = [];
 
