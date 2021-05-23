@@ -26,4 +26,4 @@ jobs:
         rm -rf .git/
         rm -rf .github/
         rm -rf .vscode/
-        aws s3 sync . s3://danherlihy.me --metadata-directive REPLACE --expires 2034-01-01T00:00:00Z --cache-control max-age=604800,public
+        aws s3 sync . s3://danherlihy.me
