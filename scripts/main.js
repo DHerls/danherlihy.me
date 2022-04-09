@@ -4,7 +4,7 @@ const configureAttributes = () => {
   let attributes = [
     "Leader",
     "Juggler",
-    "Robot",
+    "Totally not a Robot",
     "Friend",
     "Consultant",
     "Volunteer",
@@ -15,7 +15,8 @@ const configureAttributes = () => {
     "Communicator",
     "Automator",
     "Lifelong Learner",
-    "Guitar Player"
+    "Guitar Player",
+    "Data Engineer"
   ];
   let used = [];
 
@@ -57,7 +58,7 @@ const configureAttributes = () => {
   setTimeout(() => {
     rotateAttribute();
     setInterval(rotateAttribute, 10000);
-  }, 3000);
+  }, 1500);
   
 }
 
