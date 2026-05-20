@@ -514,40 +514,35 @@ h4 {
     }
 
     #main-subtitle {
-        font-size: 1em;
-    }
-
-    #attributes {
         flex-direction: column;
-        align-items: center;
+        align-items: start;
+        font-size: 1em;
+        width: 60%;
     }
 
-    .sub-attribute {
-        position: relative;
-        margin-bottom: 10px;
-        width: 100%;
-        text-align: center;
+    #main-subtitle div:not(:last-child)::after {
+        content: none;
     }
-
-    .sub-attribute::after {
-        content: '';
-        width: 15%;
-        height: 1px;
-        background: white;
-        position: absolute;
-        bottom: -7px;
-        left: 42.5%
-
+    
+    #main-subtitle div:last-child {
+        height: 1.2em;
     }
-
 
     nav {
         width: 100%;
         margin-bottom: 10px;
+        overflow-x: hidden;
     }
 
     nav ul {
-        justify-content: space-between;
+        display: flex;
+        justify-content: flex-start;
+        overflow-x: scroll;
+        width: 100%;
+    }
+
+    nav ul li:not(:last-child) {
+        margin-right: 14px;
     }
 
     nav ul li a {
@@ -557,6 +552,7 @@ h4 {
     .sticky {
         width: 100vw;
         padding: 0;
+        padding-top: 2vh;
     }
 
     .sticky + #nav-placeholder {
