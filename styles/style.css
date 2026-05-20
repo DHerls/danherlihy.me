@@ -138,6 +138,12 @@ h4 {
 }
 
 .subtitle {
+    display: flex;
+    font-family: 'Montserrat', sans-serif;
+    font-variant: small-caps;
+}
+
+.subtitle * {
     font-family: 'Montserrat', sans-serif;
     font-variant: small-caps;
 }
@@ -145,27 +151,40 @@ h4 {
 #main-subtitle {
     font-size: 1.5em;
     margin-top: 10px;
-    transition: width 3s ease-in-out;
     display: flex;
     white-space: nowrap;
 }
 
-#attributes {
-    display: flex;
-    width: 100%;
+#main-subtitle div:not(:last-child)::after {
+    content: "|";
+    margin: 0 4px;
 }
 
-#rotating-attribute {
-    display: inline-block;
+#cursor {
+    display: block;
+    width: 10px;
+    height: 100%;
+    margin-left: 3px;
+    animation-duration: 1.5s;
+    animation-name: blink;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(1, end);
+}
+
+@keyframes blink {
+    0% {
+        background: none;
+        display: hidden;
+    }
+
+    50% {
+        background-color: white;
+        display: block;
+    }
 }
 
 .sub-content {
     display: inline;
-}
-
-.sub-attribute::after {
-    content: "|";
-    margin: 0 4px;
 }
 
 #scroll-arrow-container {
