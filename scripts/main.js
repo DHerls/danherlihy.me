@@ -55,7 +55,9 @@ const configureAttributes = () => {
     "Data Engineer",
     "Full-Stack Developer",
     "Nerd",
-    "NYT Spelling Bee Enthusiast"
+    "NYT Spelling Bee Enthusiast",
+    "Reasonably Paranoid",
+    "Smart Home Guy",
   ];
   const used = new Set();
 
